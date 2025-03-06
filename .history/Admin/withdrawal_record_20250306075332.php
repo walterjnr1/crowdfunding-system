@@ -9,7 +9,7 @@ if (empty($_SESSION['login_email'])) {
 <html class="no-js" lang="en">
 
 <head>
-<title>Donation Record  | <?php echo $sitename; ?></title>
+<title>Withdrawal Record  | <?php echo $sitename; ?></title>
 <?php include 'head.php'; ?>
 
 
@@ -136,7 +136,7 @@ if (empty($_SESSION['login_email'])) {
                                         <tbody>
                                             
                                         <?php
-                          $sql = "SELECT students.*,requests.*,payments.* FROM students INNER JOIN requests ON students.track_number = requests.student_id INNER JOIN payments ON payments.student_id = students.track_number  order by payments.id asc";
+                          $sql = "SELECT students.*,requests.*,payments.* FROM students INNER JOIN requests ON students.track_number = requests.student_id INNER JOIN payments ON payments.student_id = students.track_number  order by payments.id asc LIMIT 8";
 									      	$result = $conn->query($sql);
                           $cnt=1;
                           while($row = $result->fetch_assoc()) {

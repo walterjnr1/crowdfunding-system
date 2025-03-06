@@ -24,14 +24,9 @@
 
         <li><a href="donation_record.php"><i class="fa fa-euro"></i> <span>Donation History</span></a>
             </li>
+            <li><a href="withdrawal.php"><i class="fa fa-euro"></i> <span>Donation History</span></a>
+            </li>
 
-            <li><a href="#"><i class="fa fa-money"></i> <span>Withdrawal Management</span></a>
-          <ul>
-            <li><a href="withdrawal.php">Make Withdrawal</a></li>
-            <li><a href="withdrawal_record.php">Withdrawal History</a></li>
-
-          </ul>
-        </li>
         
 	
       </ul>

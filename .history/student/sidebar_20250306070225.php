@@ -27,8 +27,8 @@
 
             <li><a href="#"><i class="fa fa-money"></i> <span>Withdrawal Management</span></a>
           <ul>
-            <li><a href="withdrawal.php">Make Withdrawal</a></li>
-            <li><a href="withdrawal_record.php">Withdrawal History</a></li>
+            <li><a href="with.php">Make Withdrawal</a></li>
+            <li><a href="request_record.php">Withdrawal History</a></li>
 
           </ul>
         </li>

@@ -9,7 +9,7 @@ if (empty($_SESSION['login_email'])) {
 <html class="no-js" lang="en">
 
 <head>
-<title>Donation Record  | <?php echo $sitename; ?></title>
+<title>Withdrawal Record  | <?php echo $sitename; ?></title>
 <?php include 'head.php'; ?>
 
 
@@ -127,16 +127,18 @@ if (empty($_SESSION['login_email'])) {
                                             <tr>
                                                 <th data-field="state" data-checkbox="true"></th>
                                                 <th data-field=""><div align="center">S/N</div></th>
-                                                <th data-field="title"><div align="center">Title</div></th>
+                                                <th data-field="title"><div align="center">Student Name</div></th>
                                                 <th data-field="amount" data-editable="true"><div align="center">Amount</div></th>
-                                                <th data-field="name" data-editable="true"><div align="center">Donor</div></th>
-                                                <th data-field="payment_date" data-editable="true"><div align="center">Date of Payment</div></th>
+                                                <th data-field="name" data-editable="true"><div align="center">Bank</div></th>
+                                                <th data-field="account" data-editable="true"><div align="center">Account Number</div></th>
+                                                <th data-field="withdrawal_date" data-editable="true"><div align="center">Date</div></th>
+
                                             </tr>
                                         </thead>
                                         <tbody>
                                             
                                         <?php
-                          $sql = "SELECT students.*,requests.*,payments.* FROM students INNER JOIN requests ON students.track_number = requests.student_id INNER JOIN payments ON payments.student_id = students.track_number  order by payments.id asc";
+                          $sql = "SELECT students.*,requests.*,payments.* FROM students INNER JOIN requests ON students.track_number = requests.student_id INNER JOIN payments ON payments.student_id = students.track_number  order by payments.id asc LIMIT 8";
 									      	$result = $conn->query($sql);
                           $cnt=1;
                           while($row = $result->fetch_assoc()) {
